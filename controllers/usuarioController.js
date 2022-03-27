@@ -36,15 +36,15 @@ const { validationResult } = require("express-validator")
 //     }
 // }
 
-// exports.obtenerUsuarios = async (req, res) => {
-//     try {
-//         const usuarios = await Usuario.find();
-//         res.send(usuarios);
-//     } catch (error) {
-//         res.status(400).json({ msg: 'error al obtener los usuarios' });
-//         console.log('🚀 - error', error);
-//     }
-// };
+exports.obtenerUsuarios = async (req, res) => {
+    try {
+        const usuarios = await Usuario.find();
+        res.send(usuarios);
+    } catch (error) {
+        res.status(400).json({ msg: 'error al obtener los usuarios' });
+        console.log('🚀 - error', error);
+    }
+};
 
 exports.deleteUsuario = async (req, res) => {
     const { userId } = req.params;
