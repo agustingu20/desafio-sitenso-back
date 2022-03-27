@@ -6,8 +6,8 @@ const usuarioValidations = require("../validations/usuarioValidations")
 
 // Crear un usuario
 // api/usuarios
-router.post('/', usuarioValidations.crearUsuario, usuarioController.crearUsuario);
-router.get('/', usuarioController.obtenerUsuarios);
+// router.post('/', usuarioValidations.crearUsuario, usuarioController.crearUsuario);
+// router.get('/', usuarioController.obtenerUsuarios);
 router.delete('/:userId', usuarioController.deleteUsuario);
 
 module.exports = router;
