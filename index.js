@@ -5,6 +5,7 @@ require("dotenv").config()
 const morgan = require("morgan")
 const usuariosRoute = require('./routes/usuariosRoute');
 const authRoute = require("./routes/authRoute")
+const favouriteMovieRoute = require("./routes/favouriteMovieRoute")
 const cors = require('cors');
 
 
@@ -31,6 +32,7 @@ app.use(cors());
 //importar rutas
 app.use('/api/usuarios', usuariosRoute)
 app.use('/api/auth', authRoute)
+app.use('/api/favouritesMovies', favouriteMovieRoute)
 
 
 // puerto y arranque del servidor
